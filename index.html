@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html manifest="cache.appcache">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.6"/>
+<title>Hangman!</title>
+<style>
+	body{font-family:"Courier New",Courier,monospace;background-color:#FFFFFF}
+	span.hanged,
+	span.letter {color:#FFFFFF;}
+	span.letter {font-size:2em;border-bottom:solid 2px #000;margin:0 2px}
+	span.hanged.visible,
+	span.letter.visible{color:#000000}
+	div {min-height:20px}
+	div#gallows{color:#000000}
+	button.hide{color: white;background-color: white;border: white;}
+</style>
+
+<script src="jquery-1.6.2.min.js"></script>
+<script type='text/javascript'>
+	$(function() {
+
+		// Bind universal events that appear on every page
+		$('.guessletter button').bind('click', processGuess );
+
+	});
+</script>
+<!--<link rel="stylesheet" type="text/css" href="mobile.css" media="only all and (max-width: 400px)" />-->
+</head>
+<body>
+
+<h1>HANGMAN!</h1>
+
+<div id='gallows'><pre>
+     _________
+    |         |
+    |         <span id='head' class='hanged'>0</span>
+    |        <span id='larm' class='hanged'>/</span><span id='torso' class='hanged'>|</span><span id='rarm' class='hanged'>\</span>
+    |        <span id='lleg' class='hanged'>/</span> <span id='rleg' class='hanged'>\</span> 
+    |
+    |
+</pre></div>
+
+<div id='word'>
+</div>
+
+<div id='guess'>
+</div>
+
+<div class='guessletter' id='choices'>
+	<button id='a'>a</button>
+	<button id='b'>b</button>
+	<button id='c'>c</button>
+	<button id='d'>d</button>
+	<button id='e'>e</button>
+	<button id='f'>f</button>
+	<button id='g'>g</button>
+	<button id='h'>h</button>
+	<button id='i'>i</button>
+	<button id='j'>j</button>
+	<button id='k'>k</button>
+	<button id='l'>l</button>
+	<button id='m'>m</button>
+	<button id='n'>n</button>
+	<button id='o'>o</button>
+	<button id='p'>p</button>
+	<button id='q'>q</button>
+	<button id='r'>r</button>
+	<button id='s'>s</button>
+	<button id='t'>t</button>
+	<button id='u'>u</button>
+	<button id='v'>v</button>
+	<button id='w'>w</button>
+	<button id='x'>x</button>
+	<button id='y'>y</button>
+	<button id='z'>z</button>
+</div>
+
+<div id='button'>
+<button onclick='RESET_GAME();'>Reset Game</button>
+
+</div>
+<script src="hangman.js"></script>
+</body>
+</html>
