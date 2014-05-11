@@ -1,8 +1,0 @@
-	body{font-family:"Courier New",Courier,monospace;color:#000;background-color:#06F}
-	span.hanged,
-	span.letter {color:#06F;}
-	span.letter {font-size:2em;border-bottom:solid 2px #000;margin:0 2px}
-	span.hanged.visible,
-	span.letter.visible{color:#000}
-	div {min-height:20px}
-	button.hide{color: #06F;background-color: #06F;border:#06F;}
